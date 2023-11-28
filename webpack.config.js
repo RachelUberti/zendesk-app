@@ -4,18 +4,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const externalAssets = {
-  js: [
-    'https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js'
-  ]
-}
-
 module.exports = {
   entry: {
     app: [
       '@babel/polyfill',
-      './src/utils/ticket_sidebar.js',
-      './src/index.css'
+      './src/App.js'
     ]
   },
   output: {
@@ -63,7 +56,6 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       warning: 'AUTOMATICALLY GENERATED FROM ./src/templates/iframe.html - DO NOT MODIFY THIS FILE DIRECTLY',
-      vendorJs: externalAssets.js,
       template: './src/iframe.html',
       filename: 'iframe.html'
     })

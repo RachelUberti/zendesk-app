@@ -1,10 +1,14 @@
 import React from 'react'
-import Text from './text'
+import ReactDOM from 'react-dom'
+import Text from './Text'
 
-export const App = () => {
+const App = () => {
+
   return (
     <Text name="Rachel" />
   )
 }
 
 export default App
+
+ReactDOM.render(<App />, document.getElementById('customer-lookup'))

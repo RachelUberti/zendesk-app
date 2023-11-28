@@ -6,9 +6,7 @@
   </head>
 
   <body>
-    <section data-main class="main">
-      <img class="loader" src="spinner.gif"/>
-    </section>
-    <% _.forEach(htmlWebpackPlugin.options.vendorJs, function(js) { %><script type="text/javascript" src="<%= js %>"></script><% }); %>
+    <section data-main class="main" id="customer-lookup" />
+    <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
   </body>
 </html>
