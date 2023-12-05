@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import Text from './Text'
+import Header from './components/Header'
+import CustomerView from './pages/CustomerView'
+import SearchView from './pages/SearchView'
 
 const App = () => {
+  const [tab, setTab] = useState("customer") 
+  
+  const handleTabChange = () => {
+    tab === "customer" ? setTab("search") : setTab("customer")
+  }
 
   return (
-    <Text name="Rachel" />
+    <>
+      <Header />
+      <button onClick={() => handleTabChange()}>{tab}</button>
+      {tab === "customer" && ( <CustomerView /> )}
+      {tab === "search" && ( <SearchView /> )}
+    </>
   )
 }
 

@@ -38,18 +38,51 @@ eval("\n\n__webpack_require__(/*! core-js/es6 */ \"./node_modules/core-js/es6/in
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _Text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Text */ \"./src/Text.js\");\n\n\n\nvar App = function App() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Text__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    name: \"Rachel\"\n  });\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\nreact_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(App, null), document.getElementById('customer-lookup'));\n\n//# sourceURL=webpack://app_scaffold/./src/App.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Header */ \"./src/components/Header.js\");\n/* harmony import */ var _pages_CustomerView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/CustomerView */ \"./src/pages/CustomerView.js\");\n/* harmony import */ var _pages_SearchView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/SearchView */ \"./src/pages/SearchView.js\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _iterableToArrayLimit(r, l) { var t = null == r ? null : \"undefined\" != typeof Symbol && r[Symbol.iterator] || r[\"@@iterator\"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t[\"return\"] && (u = t[\"return\"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\nvar App = function App() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(\"customer\"),\n    _useState2 = _slicedToArray(_useState, 2),\n    tab = _useState2[0],\n    setTab = _useState2[1];\n  var handleTabChange = function handleTabChange() {\n    tab === \"customer\" ? setTab(\"search\") : setTab(\"customer\");\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", {\n    onClick: function onClick() {\n      return handleTabChange();\n    }\n  }, tab), tab === \"customer\" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_pages_CustomerView__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), tab === \"search\" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_pages_SearchView__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\nreact_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(App, null), document.getElementById('customer-lookup'));\n\n//# sourceURL=webpack://app_scaffold/./src/App.js?");
 
 /***/ }),
 
-/***/ "./src/Text.js":
-/*!*********************!*\
-  !*** ./src/Text.js ***!
-  \*********************/
+/***/ "./src/components/Header.js":
+/*!**********************************!*\
+  !*** ./src/components/Header.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar Text = function Text(_ref) {\n  var name = _ref.name;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, name);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Text);\n\n//# sourceURL=webpack://app_scaffold/./src/Text.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header.scss */ \"./src/components/Header.scss\");\n\n\nvar Header = function Header() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"header\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, \"Customer Details\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);\n\n//# sourceURL=webpack://app_scaffold/./src/components/Header.js?");
+
+/***/ }),
+
+/***/ "./src/components/Row.js":
+/*!*******************************!*\
+  !*** ./src/components/Row.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n//We need to have the ability to pass a URL down (this URL is optional (e.g. if statement)\nvar Row = function Row(_ref) {\n  var name = _ref.name,\n    value = _ref.value,\n    url = _ref.url,\n    bold = _ref.bold;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, bold ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"b\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, name, \": \")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, name, \": \"), url ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"a\", {\n    href: url\n  }, value) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, value));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Row);\n\n//# sourceURL=webpack://app_scaffold/./src/components/Row.js?");
+
+/***/ }),
+
+/***/ "./src/pages/CustomerView.js":
+/*!***********************************!*\
+  !*** ./src/pages/CustomerView.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_Row__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Row */ \"./src/components/Row.js\");\n/* harmony import */ var _CustomerView_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CustomerView.scss */ \"./src/pages/CustomerView.scss\");\n\n\n\nvar customerData = {\n  name: \"Rachel's Chip Shop\",\n  address: \"123 Chippie Lane\",\n  city: \"Red Rock\",\n  state: \"Eggs\",\n  country: \"Egg Country\",\n  product: \"MF\",\n  // Reseller needs to link to a HubSpot page\n  reseller: \"Big Kahuna\",\n  reseller_link: \"/hubspot/link/\"\n};\nvar CustomerView = function CustomerView() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"customer-view\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Row__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    name: \"Company Name\",\n    value: customerData.name\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Row__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    name: \"Address\",\n    value: customerData.address\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Row__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    name: \"City\",\n    value: customerData.city\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Row__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    name: \"State\",\n    value: customerData.state,\n    bold: true\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Row__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    name: \"Country\",\n    value: customerData.country\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Row__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    name: \"Product\",\n    value: customerData.product\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Row__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    name: \"Reseller\",\n    value: customerData.reseller,\n    url: customerData.reseller_link\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CustomerView);\n\n//# sourceURL=webpack://app_scaffold/./src/pages/CustomerView.js?");
+
+/***/ }),
+
+/***/ "./src/pages/SearchView.js":
+/*!*********************************!*\
+  !*** ./src/pages/SearchView.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar SearchView = function SearchView() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, \"Im a search view\");\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchView);\n\n//# sourceURL=webpack://app_scaffold/./src/pages/SearchView.js?");
 
 /***/ }),
 
@@ -3178,6 +3211,28 @@ eval("// ie9- setTimeout & setInterval additional parameters fix\nvar global = _
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("__webpack_require__(/*! ../modules/web.timers */ \"./node_modules/core-js/modules/web.timers.js\");\n__webpack_require__(/*! ../modules/web.immediate */ \"./node_modules/core-js/modules/web.immediate.js\");\n__webpack_require__(/*! ../modules/web.dom.iterable */ \"./node_modules/core-js/modules/web.dom.iterable.js\");\nmodule.exports = __webpack_require__(/*! ../modules/_core */ \"./node_modules/core-js/modules/_core.js\");\n\n\n//# sourceURL=webpack://app_scaffold/./node_modules/core-js/web/index.js?");
+
+/***/ }),
+
+/***/ "./src/components/Header.scss":
+/*!************************************!*\
+  !*** ./src/components/Header.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://app_scaffold/./src/components/Header.scss?");
+
+/***/ }),
+
+/***/ "./src/pages/CustomerView.scss":
+/*!*************************************!*\
+  !*** ./src/pages/CustomerView.scss ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://app_scaffold/./src/pages/CustomerView.scss?");
 
 /***/ }),
 
