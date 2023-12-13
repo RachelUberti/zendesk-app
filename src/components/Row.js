@@ -5,7 +5,7 @@ import React from "react";
 const Row = ({name, value, url, bold}) => {
 
   return (
-    <p>
+    <p className="row">
       {bold ? <b><span>{name}: </span></b> : <span>{name}: </span>}
       {url ? <a href={url}>{value}</a> : <span>{value}</span>}
     </p>

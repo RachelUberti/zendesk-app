@@ -1,3 +1,20 @@
-.row {
-  background-color: beige;
+.customer-view {
+  margin-top: 8px;
+  border: 1px solid #B6B6B8;
 }
+
+.row {
+  font-family: "Source Sans Pro,Arial,sans-serif";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0px;
+  padding: 8px;
+
+  &:nth-of-type(odd) {
+      background-color: #F9F9FB;
+    }
+
+  &:nth-of-type(even) {
+    background-color: white;
+  }
+}  

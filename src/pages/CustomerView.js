@@ -18,13 +18,13 @@ const CustomerView = () => {
 
   return (
     <div className="customer-view">
-      <Row name="Company Name" value={customerData.name}/>
-      <Row name="Address" value={customerData.address}/>
-      <Row name="City" value={customerData.city} />
+      <Row name="Company Name" value={customerData.name} bold />
+      <Row name="Address" value={customerData.address} bold />
+      <Row name="City" value={customerData.city} bold />
       <Row name="State" value={customerData.state} bold />
-      <Row name="Country" value={customerData.country}/>
-      <Row name="Product" value={customerData.product}/>
-      <Row name="Reseller" value={customerData.reseller} url={customerData.reseller_link}/>
+      <Row name="Country" value={customerData.country} bold />
+      <Row name="Product" value={customerData.product} bold />
+      <Row name="Reseller" value={customerData.reseller} url={customerData.reseller_link} bold />
     </div>
   )
 }
