@@ -4,6 +4,7 @@ import Header from './components/Header'
 import CustomerView from './pages/CustomerView'
 import SearchView from './pages/SearchView'
 import { calculateWindowHeight } from './utils/zendesk'
+import './App.scss'
 
 const App = () => {
   const [tab, setTab] = useState("customer") 
