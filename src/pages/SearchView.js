@@ -5,7 +5,8 @@ import { calculateWindowHeight } from '../utils/zendesk';
 const SearchView = () => {
   // useState will re-render this component when setSearchTerm is used which means 
   // searchTerm will now be a new value, and the filteredCustomers map will render
-  // the filtered list of customers based on the searchTerm
+  // the filtered list of customers based on the searchTerm. The ('') after useState
+  // is the default value of searchTerm on render, so an empty string in this case
   const [searchTerm, setSearchTerm] = useState('');
 
   // useEffect is always ran on render if you do not specify a dependency, e.g.: 
