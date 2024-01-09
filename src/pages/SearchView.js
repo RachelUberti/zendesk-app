@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { customerListData } from '../utils/data';
 import { calculateWindowHeight } from '../utils/zendesk';
 
+// TODO: Import and use lodash's debounce feature
+
 const SearchView = () => {
   // useState will re-render this component when setSearchTerm is used which means 
   // searchTerm will now be a new value, and the filteredCustomers map will render
