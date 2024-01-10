@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { customerListData } from '../utils/data';
 import { calculateWindowHeight } from '../utils/zendesk';
+import './SearchView.scss'
 
 // TODO: Import and use lodash's debounce feature
 
@@ -42,17 +43,20 @@ const SearchView = () => {
   );
   
   return (
-    <div>
-    <input
-      type="text"
-      placeholder="Search by name..."
-      value={searchTerm}
-      onChange={handleSearchChange}
-    />
+    <div className='search'>
+      <div className='search__field'>
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className='search__input'
+            />
+      </div>
     {filteredCustomers.map((customer, index) => (
-      <div key={index}>
-        <p>Name: {customer.name}</p>
-        <p>CRN: {customer.crn}</p>
+      <div className='search__row' key={index}>
+        <p className='search__row__paragraph'>Name: {customer.name}</p>
+        <p className='search__row__paragraph'>CRN: {customer.crn}</p>
       </div>
     ))}
   </div>

@@ -1,0 +1,39 @@
+.search {
+  background: #F2F2F4;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #6E6E70;
+}
+
+.search__field {
+  background-color: #6E6E70;
+}
+.search__input {
+  margin: 8px;
+  padding: 4px 8px 4px 24px;
+  border-radius: 8px;
+  width: 85%;
+  height: 32px;
+  border: none;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 20px;
+  background-color: white;
+  font-size: 16px;
+  color: #E9E9EC;
+}
+
+.search__row {
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 8px;
+  background: white;
+  box-shadow: 0 6px 12px 0 rgba(27, 27, 29, 0.15);
+}
+
+.search__row__paragraph {
+  margin: 8px 0px;
+}
+
+.search__row__paragraph:nth-child(2){
+  color: #969698;
+}
