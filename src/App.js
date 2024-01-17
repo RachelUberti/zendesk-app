@@ -1,48 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
+import axios from 'axios'
 import Header from './components/Header'
 import CustomerView from './pages/CustomerView'
 import SearchView from './pages/SearchView'
 import { calculateWindowHeight, getCrn } from './utils/zendesk'
 import './App.scss'
 
-const customerData = {
-  crn: 'C-222222',
-  name: "Rachel's Chip Shop",
-  address: "123 Chippie Lane",
-  city: "Red Rock",
-  state: "Eggs",
-  country: "Egg Country",
-  product: "MF",
-  reseller: "Big Kahuna",
-  reseller_link: "/hubspot/link/"
-}
-
 const App = () => {
   const [tab, setTab] = useState("customer") 
-  const [crn, setCrn] = useState()
-  // Only run this if tab state changes as its a dependency
-  // useEffect(() => {
-  //   console.log('ouch')
-  //   calculateWindowHeight()
-  // }, [tab])
-
-  // Only run this ONCE, on render, for as long as App is visible this will not run again
-  // useEffect(() => {
-  //   console.log('ouch')
-  //   calculateWindowHeight()
-  // }, [])
+  const [customer, setCustomer] = useState()
   
   useEffect(() => {
     calculateWindowHeight()
   })
   
   useEffect(() => {
-    getCrn().then(async (crn) => setCrn(crn))
+    getCustomerWithCrn()
   }, [])
 
   const handleTabChange = (tab) => {
     setTab(tab);
+  }
+
+  const getCustomerWithCrn = async () => {
+    const crn = await getCrn()
+    if (crn) {
+      // TODO: Move this to a new file in ./utils/hubspot.js
+      const res = await axios.get('http://localhost:8888/api/crn')
+      setCustomer(res.data)
+    }
   }
 
   return (
@@ -50,7 +37,7 @@ const App = () => {
       <Header />
       <button onClick={() => handleTabChange("search")}>Search</button>
       <button onClick={() => handleTabChange("customer")}>Customer</button>
-      {tab === "customer" && ( <CustomerView customer={customerData} /> )}
+      {tab === "customer" && customer && ( <CustomerView customer={customer} /> )}
       {tab === "search" && ( <SearchView /> )}
     </>
   )

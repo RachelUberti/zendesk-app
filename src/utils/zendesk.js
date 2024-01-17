@@ -19,10 +19,5 @@ export async function getCurrentUser() {
 
 export async function getCrn() {
   const response = await zaf.get('ticket.customField:custom_field_14576463753625');
-
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(response['ticket.customField:custom_field_14576463753625']);
-    }, 2000);
-  });
+  return response
 }
