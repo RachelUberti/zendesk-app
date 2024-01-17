@@ -13,11 +13,8 @@ const SearchView = () => {
 
   const searchCustomers = async (event) => {
     if (event.key === 'Enter' && searchTerm) {
-      const res = await axios.get('http://localhost:8888/api/customer-list')
-      const filteredCustomers = res.data.filter(customer =>
-        customer.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setSearchResults(filteredCustomers)
+      const res = await axios.get(`http://localhost:8888/api/customer-list?searchTerm=${searchTerm}`);
+      setSearchResults(res.data)
     }
   }
 
@@ -26,7 +23,7 @@ const SearchView = () => {
       <div className='search__field'>
         <input
           type="text"
-          placeholder="Search by name..."
+          placeholder="Search by name or CRN..."
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
           onKeyDown={searchCustomers}
