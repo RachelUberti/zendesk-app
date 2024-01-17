@@ -27,7 +27,7 @@ const App = () => {
     const crn = await getCrn()
     if (crn) {
       // TODO: Move this to a new file in ./utils/hubspot.js
-      const res = await axios.get('http://localhost:8888/api/crn')
+      const res = await axios.get(`http://localhost:8888/api/crn?crn=${crn}`)
       setCustomer(res.data)
     }
   }

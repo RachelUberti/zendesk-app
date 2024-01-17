@@ -16,6 +16,6 @@ export async function getCurrentUser() {
 }
 
 export async function getCrn() {
-  const response = await zaf.get('ticket.customField:custom_field_14576463753625');
-  return response
+  const response = await zaf.get('ticket.customField:custom_field_24908186');
+  return response['ticket.customField:custom_field_24908186']
 }
