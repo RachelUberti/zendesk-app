@@ -1,39 +1,50 @@
 .search {
   background: #F2F2F4;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
   color: #6E6E70;
 }
 
-.search__field {
-  background-color: #6E6E70;
-}
-.search__input {
-  margin: 8px;
-  padding: 4px 8px 4px 24px;
-  border-radius: 8px;
-  width: 85%;
-  height: 32px;
-  border: none;
-  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
-  background-size: 20px;
-  background-color: white;
-  font-size: 16px;
-  color: black;
+.search-field {
+  background-color: rgb(11, 36, 40);
+  width: 100%;
+  padding: 12px;
 }
 
-.search__row {
-  border-radius: 8px;
-  padding: 8px 12px;
-  margin: 8px;
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
+}
+
+.search-row {
+  border-radius: 6px;
   background: white;
   box-shadow: 0 6px 12px 0 rgba(27, 27, 29, 0.15);
 }
 
-.search__row__paragraph {
-  margin: 8px 0px;
+.search-row-details {
+  margin: 6px;
 }
 
-.search__row__paragraph:nth-child(2){
+.search-row-details:nth-child(2){
   color: #969698;
+}
+
+.darude-mode {
+  background: linear-gradient(230deg, #db1818, #18d9db, #7b18db, #d7db18);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 0.892s ease infinite;
+  animation: AnimationName 0.892s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:75% 0%}
+  50%{background-position:25% 100%}
+  100%{background-position:75% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:75% 0%}
+  50%{background-position:25% 100%}
+  100%{background-position:75% 0%}
 }
